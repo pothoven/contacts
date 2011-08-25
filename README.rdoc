@@ -18,34 +18,34 @@ identifier associated with it was a new task, and any missing task
 identifiers from those currently in the database were assumed to be
 deleted.  
 
-	project[new_tasks_attributes][][name] = "a new task"
-	project[existing_task_attributes][1][name] = "task 1"
-	project[existing_task_attributes][3][name] = "task 3"
+ project[new_tasks_attributes][][name] = "a new task"
+ project[existing_task_attributes][1][name] = "task 1"
+ project[existing_task_attributes][3][name] = "task 3"
 
 The controller would know to a the new task, and possibly remove task
 2 if one currently exists in the database.
 
 In the original recipe, the new and existing tasks were separated
-outusing different identifiers in the form element names
+out using different identifiers in the form element names
 (<tt>new_task_attributes</tt> vs. <tt>existing_task_attributes</tt>"),
 however, to allow Rails to both construct and consume these values
 more naturally as nested models, we'd like to name them as Rails would
 expect and make them all <tt>tasks</tt>.
 
-	project[tasks][][name] = "a new task"
-	project[tasks][1][name] = "task 1"
-	project[tasks][3][name] = "task 3"
+ project[tasks][][name] = "a new task"
+ project[tasks][1][name] = "task 1"
+ project[tasks][3][name] = "task 3"
 
 The shortcoming to this recipe is when you need to send in a whole
 group of fields that need to be combined for a single record.
 
-	project[tasks][][name] = "first new task"
-	project[tasks][][priority] = "urgent"
-	project[tasks][][name] = "another new task"
-	project[tasks][1][name] = "task 1"
-	project[tasks][1][priority] = "high"
-	project[tasks][3][name] = "task 3"
-	project[tasks][3][priority] = "low"
+ project[tasks][][name] = "first new task"
+ project[tasks][][priority] = "urgent"
+ project[tasks][][name] = "another new task"
+ project[tasks][1][name] = "task 1"
+ project[tasks][1][priority] = "high"
+ project[tasks][3][name] = "task 3"
+ project[tasks][3][priority] = "low"
 
 How does Rails know to construct the tasks with no unifying
 identifier? The <tt>name</tt> and <tt>priority</tt> values may not
@@ -63,7 +63,7 @@ This sample also utilizes the information from {"Combine contact
 attributes in model"}[link:http://refactormycode.com/codes/87-combine-contact-attributes-in-model]
 
 This code was originally written by
-{me}[link:/pothoven] as part of the
+{me}[link:https://github.com/pothoven] as part of the
 {PeepNote}[link:http://www.peepnote.com] application.  PeepNote was
 written in Rails 2.3.3 as part of the {2009 Rails
 Rumble}[link:http://archive.railsrumble.com/entries?utf8=%E2%9C%93&q=PeepNote&year=&country=&award=&commit=Filter].
