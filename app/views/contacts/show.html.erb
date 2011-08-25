@@ -1,0 +1,17 @@
+<div id="content">
+  <p id="notice"><%= notice %></p>
+  
+  <div style="height: 26px; margin-bottom: 1em;">
+	<%= link_to "Export to vCard", {:controller => :contacts, :action => 'vcard', :id => @contact.id},  :class => "btn_vcardcontact" %>
+	<%= link_to_function "Edit Contact", "$('#contact').toggle();$('#contact_edit').toggle();", :class => "btn_editcontact" %>
+	<%= link_to raw('<span>Back</span>'), contacts_path, :class => 'btn' %>
+  </div>
+  <br style="clear:both;" />
+  
+  <%= render :partial => "vcard", :locals => { :contact => @contact } %>
+  
+  <%= render :partial => "vcard_editor", :locals => { :contact => @contact } %>
+  
+</div>
+
+

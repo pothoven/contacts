@@ -1,0 +1,13 @@
+<tr class="vcard_item">
+  <%= fields_for "contact[phones][#{vcard_phone.new_record? ? new_phone_index : vcard_phone.id}]", vcard_phone do |f| %>
+  <td>
+    <%= f.select :contact_type_id, ContactType.for(vcard_phone), {} %>
+  </td>
+  <td>
+	<%= f.text_field :phone_number, :class => "input_field" %>
+  </td>
+  <td>
+	<%= link_to_function image_tag("delete.png", :border => 0, :alt=> "remove", :title=> "remove"), "remove_item(this)" %>
+  </td>
+  <% end -%>
+</div>

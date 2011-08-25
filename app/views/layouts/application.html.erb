@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacts</title>
+  <%= stylesheet_link_tag "style" %>
+  <%= google_javascript_include_tag %>
+  <%= csrf_meta_tag %>
+  <%= yield :head %>
+</head>
+<body>
+
+<%= yield %>
+
+<%= yield :javascript %>
+</body>
+</html>

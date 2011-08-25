@@ -1,0 +1,18 @@
+<%= fields_for "contact[company]", vcard_company do |f| %>
+<tr>
+  <th style="text-align:right;">
+	<%= f.label :title %>
+  </th>
+  <td>
+	<%= f.text_field :title, :class => "input_field" %>
+  </td>
+</tr>
+<tr>
+  <th style="text-align:right;">
+	<%= f.label :organization %>
+  </th>
+  <td>
+	<%= f.text_field :organization, :class => "input_field" %>
+  </td>
+</tr>
+<% end -%>

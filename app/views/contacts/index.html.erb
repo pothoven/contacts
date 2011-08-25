@@ -1,0 +1,26 @@
+<div id="content">
+  <h1>Contact Manager</h1>
+  
+  <div id="contact_list">
+	<table>
+	  <tr>
+		<th>Contact Name</th>
+		<th></th>
+		<th></th>
+	  </tr>
+	  
+	  <% @contacts.each do |contact| %>
+	  <tr>
+		<td><%= contact.name %></td>
+		<td><%= link_to 'View/Edit info', contact, :class => 'btn_viewedit' %></td>
+		<td> <%= button_to "Delete", contact, :method=>:delete, :class=>"btn_delete", :title => "Delete #{contact.name}", :alt => "Delete" %></td>
+	  </tr>
+	  <% end %>
+	</table>
+  </div>
+  
+  <br />
+  
+  <%= link_to raw('<span>New Contact</span>'), new_contact_path, :class => "btn" %>
+  <%= link_to "Export list to vCard", vcards_contacts_path,  :class => "btn_vcards" %>
+</div>

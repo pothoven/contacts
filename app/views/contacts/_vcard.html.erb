@@ -1,0 +1,90 @@
+<%= content_for :head do -%>
+<%= stylesheet_link_tag "contact", "jSocial" %>
+<% end -%>
+<% no_data = "none"%>
+<div class="contact_info" id="contact">
+  <fieldset>
+	<legend><%= @contact.name %></legend>
+  <div class="section">
+	<div class="section_pad">
+	  <% if contact.urls.present? -%>
+	  <ul class="full">
+		<li>
+		  <div id="contact_urls">
+			<div class="social"></div>
+		  </div>
+		  <div class="clearboth"></div> 
+		</li>
+	  </ul>
+	  <% end -%>
+	  <ul style="clear:both">
+		<li>
+		  <strong>Birthday</strong><br>
+		  <% if contact.birthday.present? -%>
+		    <%= contact.birthday%>
+		  <% else %>
+		  <%= no_data %>
+		  <% end %>
+		</li>	
+		<li>
+		  <strong>Company</strong><br>
+			<% if contact.company.present? && contact.company.organization.present? -%>
+			  <%= contact.company.organization %>
+			<% else %>
+			<%= no_data %>
+			<% end%>
+		</li>
+		<li>
+		  <strong>Position</strong><br>
+		  <% if contact.company.present? && contact.company.title.present? -%>
+		    <%= contact.company.title %>
+		  <% else %>
+		  <%= no_data %>
+		  <% end %>
+		</li>				     	
+	  </ul>     
+
+	  <ul class="wider">
+		<li>
+		  <strong>Phone</strong><br>
+			<% if contact.phones.present? -%>
+			<% contact.phones.each do |phone| -%>
+			  <%= "(#{phone.contact_type.name.downcase[0,1]})" if phone.contact_type.present? %> <%= number_to_phone(phone.phone_number,  :delimiter => ".") %><br>
+			<% end -%>
+			<% else %>
+			<%= no_data %>
+			<% end -%>
+		</li>
+		<li>
+		  <strong>Address</strong><br>
+			<% if contact.addresses.present? -%>
+			<% contact.addresses.each do |address| -%>
+			  <%= "(#{address.contact_type.name.downcase[0,1]})" if address.contact_type.present? %> <%= raw(address.one_line) %><br>
+			<% end -%>
+			<% else %>
+			<%= no_data %>
+			<% end -%>
+		 </li>
+	  </ul>
+
+	  <ul class="wider">
+		<li>
+		  <strong>Email</strong><br>
+		  <% if contact.emails.present? -%>
+		  <% contact.emails.each do |email| -%>
+		  <%= "(#{email.contact_type.name.downcase[0,1]})" if email.contact_type.present? %> <%= mail_to email.email %><br>
+		  <% end -%>
+		  <% else %>
+		  <%= no_data %>
+		  <% end -%>
+		</li>
+	  </ul>
+   				     
+    </div>
+  </div>
+</fieldset>                            
+</div>
+
+<%= content_for :javascript do -%>
+<%= javascript_tag build_jsocial_config(contact.urls) if contact.urls.present?%>
+<% end -%>

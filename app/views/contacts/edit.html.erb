@@ -1,0 +1,9 @@
+<%= link_to 'Back', contacts_path %>
+
+<%= render :partial => "vcard_editor", :locals => { :contact => @contact } %>
+
+<%= javascript_tag do -%>
+jQuery(document).ready(function() {
+  $('#contact_edit').show();
+});
+<% end -%>

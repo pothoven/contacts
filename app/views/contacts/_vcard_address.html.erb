@@ -1,0 +1,35 @@
+<div class="vcard_item">
+  <%= fields_for "contact[addresses][#{vcard_address.new_record? ? new_address_index : vcard_address.id}]", vcard_address do |f| %>
+  <fieldset class="vcard_address">
+	<legend><%= f.select :contact_type_id, ContactType.for(vcard_address), {} %>   <%= link_to_function image_tag("delete.png", :border => 0, :alt=> "remove", :title=> "remove"), "remove_item(this)" %></legend>
+	<table>
+	  <tr style="vertical-align: top;">
+		<td>
+		  <table>
+			<tr>
+			  <th style="text-align:right;"><%= f.label :address_1 %></th>
+			  <td><%= f.text_field :address_1, :class => "input_field" %></td>
+			</tr>
+			<tr>
+			  <th style="text-align:right;"><%= f.label :address_2 %></th>
+			  <td><%= f.text_field :address_2, :class => "input_field" %></td>
+			</tr>
+			<tr>
+			  <th style="text-align:right;"><%= f.label :city %></th>
+			  <td><%= f.text_field :city, :class => "input_field" %></td>
+			</tr>
+			<tr>
+			  <th style="text-align:right;"><%= f.label :state_province, "State/Prov" %></th>
+			  <td><%= f.select :state_province_id, StateProvince.for_select %></td>
+			</tr>
+			<tr>
+			  <th style="text-align:right;"><%= f.label :postal %></th>
+			  <td><%= f.text_field :postal, :class => "input_field" %></td>
+			</tr>
+		  </table>
+		</td>
+	  </tr>
+	</table>
+  </fieldset>
+  <% end -%>
+</div>

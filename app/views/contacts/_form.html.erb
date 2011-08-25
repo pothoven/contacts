@@ -1,0 +1,24 @@
+<%= content_for :head do -%>
+<%= stylesheet_link_tag "contact_details" %>
+<% end -%>
+<div class="contact_details" id="contact_edit" style="margin-bottom: .25in;">
+<%= form_for(@contact) do |f| -%>
+  <% if @contact.errors.any? -%>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end -%>
+
+  <%= render :partial => "contact_form", :locals => {:f => f, :contact => @contact} %>
+
+  <div class="actions">
+    <%= f.submit :class => "btn_saveinfo"  %>
+  </div>
+<% end -%>
+</div>

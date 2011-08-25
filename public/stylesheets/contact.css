@@ -1,0 +1,71 @@
+/** ==== CONTACT INFO ===== **/
+
+.contact_info ul {
+	list-style: none;
+	float: left;
+	margin-left: 5px;
+	}
+.contact_info ul li{
+	width:120px;
+	display: block;
+	margin-bottom: 7px;
+	color: #495256;
+	font-size: 11px;
+	}	
+.contact_info ul.wider li {
+  width:135px;
+}
+.contact_info ul li strong{
+	font-size: 12px;
+	}
+	
+.contact_info ul.full {
+	width:370;
+	clear: both;
+	list-style: none;
+	float: left;
+	margin-left: 5px;
+	}	
+	
+.contact_info ul li{
+	width:370;
+	display: block;
+	margin-bottom: 7px;
+	color: #495256;
+	font-size: 11px;
+	}	
+
+.contact_info fieldset {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+    -khtml-border-radius: 8px;
+	border-radius: 8px;
+	border-color: #BAD1DB;
+	border-style: solid;
+	background-color: #cddfe9;
+	padding: 5px;
+	margin-bottom: 1em;
+}
+
+.contact_info fieldset > legend {
+	font-weight: bold;
+	font-size: 1.8em;
+	color: #FFEECB;
+	background-color: #EF9257;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+	border-radius: 5px;
+    padding: 9px 9px 7px 9px;
+    margin-left: 8px;
+}
+
+.contact_info {
+	width: 640px;
+	overflow: hidden;
+	padding-left: 14px;
+	min-height: 80px;
+	}
+

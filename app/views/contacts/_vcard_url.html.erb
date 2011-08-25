@@ -1,0 +1,13 @@
+<tr class="vcard_item">
+  <%= fields_for "contact[urls][#{vcard_url.new_record? ? new_url_index : vcard_url.id}]", vcard_url do |f| %>
+  <th style="text-align: right; width: 57px;">
+	URL
+  </th>
+  <td>
+	  <%= f.text_field :url, :class => "input_field" %>
+  </td>
+  <td>
+	<%= link_to_function image_tag("delete.png", :border => 0, :alt=> "remove", :title=> "remove"), "remove_item(this)" %>
+  </td>
+  <% end -%>
+</div>

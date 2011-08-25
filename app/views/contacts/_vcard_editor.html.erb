@@ -1,0 +1,15 @@
+<%= content_for :head do -%>
+<%= stylesheet_link_tag "contact_details" %>
+<% end -%>
+<div class="contact_details" id="contact_edit" style="display:none; margin-bottom: .25in;">
+  <%= form_for contact do |f| -%>
+  <%= f.error_messages %>
+
+  <%= render :partial => "contact_form", :locals => {:f => f, :contact => contact} %>
+  
+  <!--Submit--> 
+  <%= submit_tag "Save Contact", :class => "btn_saveinfo" %>
+  <div class="clearboth"></div> 
+
+  <% end -%>
+</div>

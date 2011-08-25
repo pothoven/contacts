@@ -1,0 +1,109 @@
+  <!--Name--> 
+  <div class="edit_title">Name</div> 
+  <div class="edit_holder vcard_item_group">
+	<table id="vcard_other"> 
+	  <tbody>
+		<tr class="name"> 
+		  <th style="text-align: right; width: 57px;"> 
+		  	<%= label_tag "Name" %>
+		  </th> 
+		  <td> 
+			<%= f.text_field :name, :class => "input_field" %>
+		  </td> 
+	  	</tr> 
+	  </tbody>
+	</table> 
+  </div>								
+  
+  <!--Birthday--> 
+  <div class="edit_title">Birthday</div> 
+  <div class="edit_holder vcard_item_group">
+	<table id="vcard_other"> 
+	  <tbody>
+		<tr class="birthday"> 
+		  <th style="text-align: right; width: 57px;"> 
+		  	<%= label_tag "Birthday" %>
+		  </th> 
+		  <td> 
+			<%= f.text_field :birthday, :year_range => 105.years.ago..0.years.from_now, :class => "input_field" %>
+		  </td> 
+	  	</tr> 
+	  </tbody>
+	</table> 
+  </div>								
+  
+  <!--Company--> 
+  <div class="edit_title">Company</div> 
+  <div class="edit_holder">
+	<table id="vcard_company">
+	  <%= render :partial => 'vcard_company', :object => contact.company || ContactCompanyDetail.new  %>
+	</table>
+  </div>			  			
+  
+  <!-- Address -->
+  <%= javascript_tag do -%>
+	  var new_address_index = -1;
+      var addressForm = "<%= escape_javascript(render :partial => "vcard_address", :object => ContactAddress.new, :locals => {:new_address_index => "new_address_index" }) %>";
+	  function addAddress() {
+	     $('#vcard_addresses').append(addressForm.replace(/new_address_index/g, new_address_index));
+	     new_address_index--;
+	  }
+  <% end -%>
+  <div class="edit_title">Addresses  <%= link_to_function raw("&nbsp;"), "addAddress()", {:class => "additem_icon"} %></div>
+  <div class="edit_holder vcard_item_group">
+    <%= hidden_field_tag "contact[addresses][0][id]", 0 %>
+    <div id="vcard_addresses">
+      <%= render :partial => "vcard_address", :collection => contact.addresses %>
+    </div>
+  </div>
+
+  <!--Phone--> 
+  <%= javascript_tag do -%>
+	  var new_phone_index = -1;
+      var phoneForm = "<%= escape_javascript(render :partial => "vcard_phone", :object => ContactPhone.new, :locals => {:new_phone_index => "new_phone_index" }) %>";
+	  function addPhone() {
+	     $('#vcard_phones').append(phoneForm.replace(/new_phone_index/g, new_phone_index));
+	     new_phone_index--;
+	  }
+  <% end -%>
+  <div class="edit_title">Phones  <%= link_to_function raw("&nbsp;"), "addPhone()", {:class => "additem_icon"} %></div>
+  <div class="edit_holder vcard_item_group">
+	<%= hidden_field_tag "contact[phones][0][id]", 0 %>
+	<table id="vcard_phones">
+	  <%= render :partial => 'vcard_phone', :collection => contact.phones %>
+    </table>
+  </div>			
+  
+  <!--Email--> 
+  <%= javascript_tag do -%>
+	  var new_email_index = -1;
+      var emailForm = "<%= escape_javascript(render :partial => "vcard_email", :object => ContactEmail.new, :locals => {:new_email_index => "new_email_index" }) %>";
+	  function addEmail() {
+	     $('#vcard_emails').append(emailForm.replace(/new_email_index/g, new_email_index));
+	     new_email_index--;
+	  }
+  <% end -%>
+  <div class="edit_title">Email <%= link_to_function raw("&nbsp;"), "addEmail()", {:class => "additem_icon"}  %></div>
+  <div class="edit_holder vcard_item_group">
+	<%= hidden_field_tag "contact[emails][0][id]", 0 %>
+	<table id="vcard_emails">
+	  <%= render :partial => 'vcard_email', :collection => contact.emails %>
+	</table>
+  </div>
+
+  <!--URLs--> 
+  <%= javascript_tag do -%>
+	  var new_url_index = -1;
+      var urlForm = "<%= escape_javascript(render :partial => "vcard_url", :object => ContactUrl.new, :locals => {:new_url_index => "new_url_index" }) %>";
+	  function addUrl() {
+	     $('#vcard_urls').append(urlForm.replace(/new_url_index/g, new_url_index));
+	     new_url_index--;
+	  }
+  <% end -%>
+  <div class="edit_title">URLs <%= link_to_function raw("&nbsp;"), "addUrl()", {:class => "additem_icon"} %></div>
+  <div class="edit_holder vcard_item_group">
+	<%= hidden_field_tag "contact[urls][0][id]", 0 %>
+	<table id="vcard_urls">
+	  <%= render :partial => 'vcard_url', :collection => contact.urls %>
+	</table>
+  </div>

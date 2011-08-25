@@ -1,0 +1,47 @@
+.contact_details {
+	clear: both;
+	background: #cddfe9;
+	padding: 20px;
+	width: 660px;
+	border-top:1px solid #b4c6cf;
+	}
+	
+.contact_details .edit_title{
+	font-size: 16px;
+	font-weight: bold;
+	color: #75868e;
+	padding-top: 10px;
+	}
+
+.contact_details  .edit_holder{
+	margin-top: 4px;
+	margin-bottom: 10px;
+	background: #ebf4f9;
+	padding: 10px 20px;
+	border: 1px solid #c7d7e0;
+	font-size: 11px;
+	font-weight: normal;
+	overflow: hidden;
+	color: #495256;
+	}
+
+.contact_details  .edit_holder .input_field{
+	background: #6b7d87;
+	border: #c7d7e0;
+	padding: 7px 5px;
+    -moz-border-radius: 2px; /* FF1+ */
+ 	-webkit-border-radius: 2px; /* Saf3+, Chrome */
+    border-radius: 2px; /* Opera 10.5, IE 9 */
+    width: 240px;
+    color: #ebf4f9;
+    margin: 0px 4px;
+    }
+
+.additem_icon{
+	height: 16px;
+	width: 16px;
+	background: url("/images/icon_add-dark.jpg") no-repeat center center;
+	text-indent: -9999px;
+	padding: 0px 5px;
+	margin-left: 1px;
+	}
