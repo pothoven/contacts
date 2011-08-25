@@ -63,7 +63,7 @@ This sample also utilizes the information from {"Combine contact
 attributes in model"}[link:http://refactormycode.com/codes/87-combine-contact-attributes-in-model]
 
 This code was originally written by
-{me}sy as part of the
+{me}[link:http://www.github.com/pothoven] as part of the
 {PeepNote}[link:http://www.peepnote.com] application.  PeepNote was
 written in Rails 2.3.3 as part of the {2009 Rails
 Rumble}[link:http://archive.railsrumble.com/entries?utf8=%E2%9C%93&q=PeepNote&year=&country=&award=&commit=Filter].
