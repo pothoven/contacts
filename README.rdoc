@@ -76,4 +76,8 @@ re-writing how it worked.
 
 == Install
 
-
+ git clone git@github.com:pothoven/contacts.git
+ cd contacts
+ rake db:migrate
+ rake db:populate_states_provinces_countries
+ rails server

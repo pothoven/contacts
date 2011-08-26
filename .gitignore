@@ -1,5 +1,4 @@
 cached/*
-config/database.yml
 log/*.log
 log/*.pid
 tmp/**/*
