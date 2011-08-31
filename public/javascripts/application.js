@@ -2,7 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 function remove_item(element) {
-	$(element).parent('.vcard_item').remove();
+	$(element).parentsUntil('.vcard_item').parent('.vcard_item').remove();
 }
 
 
