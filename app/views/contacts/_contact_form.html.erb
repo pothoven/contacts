@@ -15,23 +15,6 @@
 	</table> 
   </div>								
   
-  <!--Birthday--> 
-  <div class="edit_title">Birthday</div> 
-  <div class="edit_holder vcard_item_group">
-	<table id="vcard_other"> 
-	  <tbody>
-		<tr class="birthday"> 
-		  <th style="text-align: right; width: 57px;"> 
-		  	<%= label_tag "Birthday" %>
-		  </th> 
-		  <td> 
-			<%= f.text_field :birthday, :year_range => 105.years.ago..0.years.from_now, :class => "input_field" %>
-		  </td> 
-	  	</tr> 
-	  </tbody>
-	</table> 
-  </div>								
-  
   <!--Company--> 
   <div class="edit_title">Company</div> 
   <div class="edit_holder">
@@ -107,3 +90,21 @@
 	  <%= render :partial => 'vcard_url', :collection => contact.urls %>
 	</table>
   </div>
+
+  <!--Birthday--> 
+  <div class="edit_title">Birthday</div> 
+  <div class="edit_holder vcard_item_group">
+	<table id="vcard_other"> 
+	  <tbody>
+		<tr class="birthday"> 
+		  <th style="text-align: right; width: 57px;"> 
+		  	<%= label_tag "Birthday" %>
+		  </th> 
+		  <td> 
+			<%= f.text_field :birthday, :year_range => 105.years.ago..0.years.from_now, :class => "input_field" %>
+		  </td> 
+	  	</tr> 
+	  </tbody>
+	</table> 
+  </div>								
+  
