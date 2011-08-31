@@ -101,7 +101,7 @@
 		  	<%= label_tag "Birthday" %>
 		  </th> 
 		  <td> 
-			<%= f.date_select :birthday, :year_range => 105.years.ago..0.years.from_now, :class => "input_field" %>
+			<%= f.date_select :birthday, :start_year => Time.now.year - 105, :end_year => Time.now.year, :order => [:month, :day, :year], :include_blank => true, :class => "input_field" %>
 		  </td> 
 	  	</tr> 
 	  </tbody>
