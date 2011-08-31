@@ -6,7 +6,7 @@ module ApplicationHelper
     else
       js = javascript_include_tag('jquery.min')
     end
-    js += javascript_include_tag('rails', 'application')
+    js += javascript_include_tag('jrails', 'application')
     js += javascript_include_tag('jquery_ujs','jquery.jsocial')
     return js
   end
