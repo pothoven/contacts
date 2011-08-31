@@ -82,3 +82,24 @@ re-writing how it worked.
  rake db:migrate
  rake db:populate_states_provinces_countries
  rails server
+
+== Run locally
+
+ bundle install
+ rake db:migrate
+ rake db:populate_states_provinces_countries
+ rails server
+
+== Run on Heroku
+
+ gem install heroku
+ heroku create
+ git push heroku master
+ heroku rake db:migrate
+ heroku rake db:populate_states_provinces_countries
+ heroku open
+
+== Update
+
+ git pull
+ git push heroku master
