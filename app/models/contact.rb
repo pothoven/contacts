@@ -13,7 +13,7 @@ class Contact < ActiveRecord::Base
     else
       company = ContactCompanyDetail.new(company_attributes)
       company.contact = self
-      company.save(false)
+      company.save(:validate => false)
     end
   end
 
@@ -84,28 +84,28 @@ class Contact < ActiveRecord::Base
       if p.should_destroy
         p.destroy
       else
-        p.save(false)
+        p.save(:validate => false)
       end
     end
     emails.each do |e|
       if e.should_destroy
         e.destroy
       else
-        e.save(false)
+        e.save(:validate => false)
       end
     end
     addresses.each do |a|
       if a.should_destroy
         a.destroy
       else
-        a.save(false)
+        a.save(:validate => false)
       end
     end
     urls.each do |u|
       if u.should_destroy
         u.destroy
       else
-        u.save(false)
+        u.save(:validate => false)
       end
     end
   end
