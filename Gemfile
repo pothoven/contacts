@@ -5,7 +5,6 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'vpim'
 gem 'populator'
@@ -32,6 +31,11 @@ gem 'populator'
 # group :development, :test do
 #   gem 'webrat'
 # end
-group :development do
+group :development, :test do
+  gem 'sqlite3'
   gem 'awesome_print'
+end
+
+group :production do
+  gem 'pg'
 end
