@@ -4,6 +4,7 @@ log/*.pid
 tmp/**/*
 shared/**/*
 tmp/restart.txt
+.sass-cache/
 .DS_Store
 *~
 db/schema.rb

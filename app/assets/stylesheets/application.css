@@ -1,3 +1,8 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
 body { 
 	background-color: #fff; 
 	color: #333; 
@@ -69,44 +74,44 @@ a.btn_viewedit {
 	height: 27px;
 	width: 133px;
 	text-indent: -9999px;
-	background: url("/images/btn_viewedit.png") no-repeat 0 0;
+	background: url("btn_viewedit.png") no-repeat 0 0;
 	float: right;
 	margin-bottom: 4px;
 	}
-a.btn_viewedit:hover {background: url("/images/btn_viewedit.png") no-repeat 0 -27px;}
+a.btn_viewedit:hover {background: url("btn_viewedit.png") no-repeat 0 -27px;}
 
 a.btn_vcards {
 	display: block;
 	height: 26px;
 	width: 182px;
 	text-indent: -9999px;
-	background: url("/images/btn_vcards.png") no-repeat 0 0;
+	background: url("btn_vcards.png") no-repeat 0 0;
 	float: left;
 }
-a.btn_vcards:hover {background: url("/images/btn_vcards.png") no-repeat 0 -26px;}	
+a.btn_vcards:hover {background: url("btn_vcards.png") no-repeat 0 -26px;}	
 
 a.btn_vcardcontact {
 	display: block;
 	height: 26px;
 	width: 146px;
 	text-indent: -9999px;
-	background: url("/images/btn_vcard-contact.png") no-repeat 0 0;
+	background: url("btn_vcard-contact.png") no-repeat 0 0;
 	float: right;
 	margin-top: 4px;
 }
-a.btn_vcardcontact:hover {background: url("/images/btn_vcard-contact.png") no-repeat 0 -26px;}	
+a.btn_vcardcontact:hover {background: url("btn_vcard-contact.png") no-repeat 0 -26px;}	
 
 a.btn_editcontact {
 	display: block;
 	height: 26px;
 	width: 114px;
 	text-indent: -9999px;
-	background: url("/images/btn_editcontact.png") no-repeat 0 0;
+	background: url("btn_editcontact.png") no-repeat 0 0;
 	float: right;
 	margin-top: 4px;
 	margin-right: 8px;
 }
-a.btn_editcontact:hover {background: url("/images/btn_editcontact.png") no-repeat 0 -26px;}	
+a.btn_editcontact:hover {background: url("btn_editcontact.png") no-repeat 0 -26px;}	
 
 .btn_saveinfo {
 	border: 0px;
@@ -115,10 +120,10 @@ a.btn_editcontact:hover {background: url("/images/btn_editcontact.png") no-repea
 	height: 27px;
 	width: 133px;
 	text-indent: -9999px;
-	background: url("/images/btn_saveinfo.jpg") no-repeat 0 0;
+	background: url("btn_saveinfo.jpg") no-repeat 0 0;
 	margin-top: 8px;
 }
-.btn_saveinfo:hover {background: url("/images/btn_saveinfo.jpg") no-repeat 0 -27px; cursor: pointer;}	    
+.btn_saveinfo:hover {background: url("btn_saveinfo.jpg") no-repeat 0 -27px; cursor: pointer;}	    
 .btn_delete {
 	border: 0px;
 	display: block;
@@ -126,14 +131,14 @@ a.btn_editcontact:hover {background: url("/images/btn_editcontact.png") no-repea
 	height: 27px;
 	width: 27px;
 	text-indent: -9999px;
-	background: url("/images/delete.png") no-repeat 0 0;
+	background: url("delete.png") no-repeat 0 0;
 	margin-top: 8px;
 }
 .btn_delete:hover {cursor: pointer;}	    
 
 a.btn {
 	float: left;
-	background: url("../images/btn_beige_001_left.png") no-repeat left top;
+	background: url("btn_beige_001_left.png") no-repeat left top;
 	margin: 0;
 	padding: 0 0 0 9px;
 	text-decoration: none;
@@ -144,7 +149,7 @@ a.btn span {
 	float: left;
 	display: block;
 	margin-right: 3px;
-	background: url("../images/btn_beige_001_right.png") no-repeat right top;
+	background: url("btn_beige_001_right.png") no-repeat right top;
 	padding: 5px 15px 6px 6px;
 	color: #226e8e;
 	font-size: 14px;
