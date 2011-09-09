@@ -17,7 +17,7 @@
 /*========================================*/
 /*========SOCIAL LARGE SIZE===============*/
 /*========================================*/
-.social ul a.twitter, a.facebook, a.flickr, a.friendfeed, a.delicious, a.digg, a.lastfm, a.youtube, a.feed, a.linked-in{background:url(../images/social_icons.png);}
+.social ul a.twitter, a.facebook, a.flickr, a.friendfeed, a.delicious, a.digg, a.lastfm, a.youtube, a.feed, a.linked-in{background:url(social_icons.png);}
 
 .social ul a.twitter{background-position: 0px 0px;}
 .social ul a.facebook{background-position: 0px -42px;}
@@ -34,7 +34,7 @@
 /*========================================*/
 /*========SOCIAL SMALL SIZE===============*/
 /*========================================*/
-.social_small ul a.twitter, .social_small ul a.facebook, .social_small ul a.flickr, .social_small ul a.friendfeed, .social_small ul a.delicious, .social_small ul a.digg, .social_small ul a.lastfm, .social_small ul a.youtube, .social_small ul a.feed, .social_small ul a.other, .social_small ul a.linked-in{background:url(../images/social_icons_small.png);}
+.social_small ul a.twitter, .social_small ul a.facebook, .social_small ul a.flickr, .social_small ul a.friendfeed, .social_small ul a.delicious, .social_small ul a.digg, .social_small ul a.lastfm, .social_small ul a.youtube, .social_small ul a.feed, .social_small ul a.other, .social_small ul a.linked-in{background:url(social_icons_small.png);}
 
 .social_small ul a.twitter{background-position: 0px 0px;}
 .social_small ul a.facebook{background-position: 0px -26px;}
