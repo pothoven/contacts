@@ -1,3 +1,15 @@
+# == Schema Information
+# Schema version: 20110825143843
+#
+# Table name: contacts
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  birthday   :date
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Contact < ActiveRecord::Base
   has_many :addresses, :class_name => 'ContactAddress', :dependent => :destroy
   has_one :company, :class_name => 'ContactCompanyDetail', :dependent => :destroy

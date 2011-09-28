@@ -1,3 +1,12 @@
+# == Schema Information
+# Schema version: 20110825143843
+#
+# Table name: contact_types
+#
+#  id   :integer         not null, primary key
+#  name :string(255)
+#
+
 class ContactType < ActiveRecord::Base
   acts_as_enumerated
 
