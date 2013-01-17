@@ -46,5 +46,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'therubyracer'
+  gem 'rails31_enable_runtime_asset_compilation'
 end
