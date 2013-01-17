@@ -46,5 +46,4 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails31_enable_runtime_asset_compilation'
 end
