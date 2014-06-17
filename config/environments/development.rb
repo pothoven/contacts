@@ -28,5 +28,10 @@ Contacts::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Allow hosts besides localhost to use the better_errors gem
+  # start server like:  TRUSTED_IP=192.168.216.1 rails s
+  #   or for a subnet:  TRUSTED_IP=192.168.216.0/24 rails s
+  BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
 end
 

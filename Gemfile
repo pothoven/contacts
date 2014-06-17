@@ -1,4 +1,6 @@
 source 'http://rubygems.org'
+source 'http://gems.github.com'
+ruby "1.9.3"
 
 gem 'rails', '~> 3.1.10'
 
@@ -18,7 +20,7 @@ gem 'vpim'
 gem 'populator'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -42,6 +44,9 @@ gem 'populator'
 group :development, :test do
   gem 'sqlite3'
   gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :production do
